@@ -1,0 +1,167 @@
+body {
+  height: 950px;
+  width: 100vw;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.login {
+  background: url("./images/food-bg.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+i.fas {
+  font-size: 48px;
+  color: white;
+}
+
+.loginFormdiv,
+.forgetPasswordFormdiv,
+.signupFormdiv {
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5px;
+  margin: 5px;
+  border: white solid 1px;
+  border-radius: 10px;
+  font-family: "Abril Fatface", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.input-group {
+  margin: 5px;
+  padding: 5px;
+}
+
+.forgetPassword,
+.loginbtndiv,
+.signupdiv {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+}
+
+.resendOtpbtn {
+  margin-top: 15px;
+}
+
+.signupdiv {
+  padding: 5px;
+  margin: 5px;
+  font-family: "Abril Fatface", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.link {
+  color: #fff;
+}
+.link:hover {
+  color: red;
+}
+
+.linkRegister,
+.linkLogin {
+  color: #fff;
+  background-color: #0dcaf0;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.linkRegister:hover,
+.linkLogin:hover {
+  color: #fff;
+  background-color: #ffc107;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.errormessage {
+  color: red;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.LoginForm,
+.forgetForm,
+.registerform {
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+}
+
+.customizepizza {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 68px;
+  line-height: 62px;
+  font-weight: 600;
+  text-align: center;
+  color: #f3a531;
+}
+
+@media (min-width: 550px) and (max-width: 1100px) {
+  .pizza_quote img {
+    width: 500px;
+  }
+
+  .customizepizza {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 549px) {
+  .pizza_quote img {
+    width: 300px;
+  }
+
+  .customizepizza {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 220px) and (max-width: 319px) {
+  .pizza_quote img {
+    width: 200px;
+  }
+  .customizepizza {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 219px) {
+  .pizza_quote img {
+    display: none;
+  }
+
+  .customizepizza {
+    display: none;
+  }
+
+  .styleleaf1 img {
+    display: none;
+  }
+}
