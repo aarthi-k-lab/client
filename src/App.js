@@ -4,14 +4,10 @@ import Home from "./components/dashBoard/home.js";
 import React, { Component } from "react";
 
 class App extends Component {
-  state = { loginflag: false };
+  state = { loginflag: localStorage.getItem("loginflag"), refreshtoken: true };
 
   componentDidMount = () => {
-    console.log("********************************");
-    console.log("component did mount");
     this.setState({ loginflag: localStorage.getItem("loginflag") });
-    console.log("state login flag:" + this.state.loginflag);
-    console.log("********************************");
   };
 
   handleLogin = (token, email, password) => {
@@ -21,42 +17,71 @@ class App extends Component {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
 
-    console.log("loginflag: " + localStorage.getItem("loginflag"));
-    console.log("token: " + localStorage.getItem("token"));
-    console.log("refreshtoken: " + localStorage.getItem("refreshtoken"));
-
     this.setState({ loginflag: localStorage.getItem("loginflag") });
-
-    console.log("***************************************");
-    console.log("state loginflag: " + this.state.loginflag);
-    console.log("***************************************");
   };
 
-  handleLogout = () => {
-    localStorage.setItem("loginflag", false);
-    localStorage.setItem("token", "");
-    localStorage.setItem("refreshtoken", "");
-    localStorage.setItem("email", "");
-    localStorage.setItem("password", "");
+  handleLogout = async () => {
+    try {
+      const logouturl = "https://thawing-ridge-74415.herokuapp.com/logout";
+      let logOutRes = await fetch(logouturl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + localStorage.getItem("refreshtoken"),
+        },
+      });
+      let logOutData = await logOutRes.json();
+      if (logOutData.error === undefined) {
+        localStorage.setItem("loginflag", false);
+        localStorage.setItem("token", "");
+        localStorage.setItem("refreshtoken", "");
+        localStorage.setItem("email", "");
+        localStorage.setItem("password", "");
 
-    console.log("loginflag: " + localStorage.getItem("loginflag"));
-    console.log("token: " + localStorage.getItem("token"));
-    console.log("refreshtoken: " + localStorage.getItem("refreshtoken"));
+        this.setState({ loginflag: localStorage.getItem("loginflag") });
+      } else {
+        console.log(logOutData);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    this.setState({ loginflag: localStorage.getItem("loginflag") });
-
-    console.log("***************************************");
-    console.log("state loginflag: " + this.state.loginflag);
-    console.log("***************************************");
+  handleRefreshToken = async () => {
+    try {
+      let user = { email: localStorage.getItem("email") };
+      let refreshUrl = "https://thawing-ridge-74415.herokuapp.com/refresh";
+      let tokenRes = await fetch(refreshUrl, {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + localStorage.getItem("refreshtoken"),
+        },
+      });
+      let tokenData = await tokenRes.json();
+      if (tokenData.error === undefined) {
+        localStorage.setItem("token", tokenData.token);
+        localStorage.setItem("refreshtoken", tokenData.refresh);
+        window.location.reload(false);
+      } else {
+        console.log(tokenData);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   render() {
     return (
       <div className="App">
-        {this.state.loginflag !== true ? (
+        {this.state.loginflag !== "true" ? (
           <Login onLogging={this.handleLogin} />
         ) : (
-          <Home onLogOut={this.handleLogout} />
+          <Home
+            onLogOut={this.handleLogout}
+            onRefresh={this.handleRefreshToken}
+          />
         )}
       </div>
     );

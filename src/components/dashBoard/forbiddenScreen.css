@@ -1,0 +1,496 @@
+.forbiddenScreenbackground {
+  background: url("./images/fetchErrorScreen.png") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px;
+  width: 100vw;
+}
+
+.sessionExpired {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 68px;
+  line-height: 62px;
+  font-weight: 600;
+  text-align: center;
+  color: #f3a531;
+}
+
+.sessionexpireddiv {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.dashboard {
+  background: url("./images/black.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home {
+  /* background-color: #393a3c; */
+  background-color: #f1c236;
+  /* background: url("./images/pizza-2.jpg") center center no-repeat; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 668px;
+  width: 100vw;
+}
+
+.navigateLinks a,
+.navigateLinks1 a {
+  color: black;
+  padding: 5px;
+}
+
+.cartBtn {
+  cursor: pointer;
+}
+
+.homeLinks {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 400;
+}
+
+.homequote {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.homeboard {
+  background: url("./images/pizza-2.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 595px;
+}
+
+.startrow {
+  height: 150px;
+}
+
+.hbBtn {
+  margin: 10px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.navbarhome {
+  display: flex;
+  align-items: center;
+}
+
+.menuboard {
+  background: url("./images/menu-bg.jpg") center center no-repeat;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 595px;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.pizzamenu,
+.othermenu {
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.menuBtn {
+  margin-top: 15px;
+}
+
+.card-menu {
+  height: 300px;
+}
+
+.pizzacard {
+  color: #000;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.customizepizzaContent {
+  background: url("./images/menu-bg.jpg") center center no-repeat;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 595px;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.crustandsizeheaders,
+.cheeseandsauceheaders,
+.toppingsheaders,
+.confirmheaders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 101, 107);
+}
+
+.crustandsizehead,
+.cheeseandsaucehead,
+.toppingshead,
+.confirmhead {
+  border-right: 5px solid white;
+  border-radius: 25%;
+}
+
+.active {
+  background-color: rgb(204, 54, 28);
+}
+
+.crustselect,
+.sizeselect,
+.cheeseselect,
+.sauceselect,
+.meatselect,
+.meatCheck,
+.nonmeatCheck {
+  background-color: transparent;
+  color: black;
+  background-color: white;
+}
+
+.meatCheck,
+.nonmeatCheck {
+  height: 400px;
+  overflow: scroll;
+}
+
+.crustselect option:active,
+.crustselect option:hover,
+.crustselect option:checked,
+.crustselect option:focus,
+.sizeselect option:active,
+.sizeselect option:hover,
+.sizeselect option:checked,
+.sizeselect option:focus {
+  outline-color: #ffffff;
+  background-color: black;
+  color: white;
+}
+
+.cheeseselect option:active,
+.cheeseselect option:hover,
+.cheeseselect option:checked,
+.cheeseselect option:focus,
+.sauceselect option:active,
+.sauceselect option:hover,
+.sauceselect option:checked,
+.sauceselect option:focus {
+  outline-color: #ffffff;
+  background-color: black;
+  color: white;
+}
+
+.customizepizzaimg {
+  height: 200px;
+}
+
+.crustandsizecontent,
+.cheeseandsaucecontent,
+.toppingscontent {
+  display: flex;
+}
+
+.next,
+.back,
+.pizzasummary {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.pizzasummary {
+  background: url("./images/confirmpizzabg.jpg") center center no-repeat;
+  height: 480px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centerdis {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutus {
+  background: url("./images/about-us.jpg") center center no-repeat;
+  height: 595px;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+}
+
+.cartItems {
+  background: url("./images/menu-bg.jpg") center center no-repeat;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 595px;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 300;
+  color: #fff;
+  padding-top: 15px;
+}
+
+.checkinput {
+  margin-left: 10px;
+}
+
+.item {
+  /* border-top: 1px solid white; */
+  /* border-bottom: 1px solid white; */
+  padding: 15px 0px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .homeboard {
+    height: 595px;
+  }
+
+  .customizepizzaContent,
+  .crustselect option,
+  .sizeselect option,
+  .cheeseselect option,
+  .sauceselect option,
+  .form-check-label {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .homeboard {
+    height: 5378x;
+  }
+
+  .customizepizzaContent,
+  .crustselect option,
+  .sizeselect option,
+  .cheeseselect option,
+  .sauceselect option,
+  .form-check-label {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .customizepizzaimg {
+    height: 120px;
+  }
+
+  .checkinput {
+    margin-left: 5px;
+  }
+
+  .item {
+    border-top: 1px solid white;
+    padding: 5px 0px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .homeboard {
+    height: 435px;
+  }
+
+  .startrow {
+    height: 100px;
+  }
+
+  .homequote {
+    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .hbBtn {
+    margin: 10px;
+    border-radius: 50px;
+    font-weight: 300;
+  }
+
+  .card-menu {
+    height: 300px;
+    width: 350px;
+  }
+
+  .customizepizzaContent,
+  .crustselect option,
+  .sizeselect option,
+  .cheeseselect option,
+  .sauceselect option,
+  .form-check-label {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .pizzaimage {
+    order: -1;
+  }
+
+  .checkinput {
+    margin-left: 5px;
+  }
+
+  .item {
+    border-top: 1px solid white;
+    padding: 5px 0px;
+  }
+}
+
+@media (min-width: 331px) and (max-width: 576px) {
+  .homeboard {
+    height: 385px;
+  }
+
+  .startrow {
+    height: 70px;
+  }
+
+  .homequote {
+    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .hbBtn {
+    margin: 10px;
+    border-radius: 0px;
+    font-weight: 300;
+  }
+
+  .card-menu {
+    height: 300px;
+    width: 300px;
+  }
+
+  .customizepizzaContent,
+  .crustselect option,
+  .sizeselect option,
+  .cheeseselect option,
+  .sauceselect option,
+  .form-check-label {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .pizzaimage {
+    order: -1;
+  }
+
+  .checkinput {
+    margin-left: 5px;
+  }
+
+  .item {
+    border: 1px solid white;
+    padding: 5px 0px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 331px) {
+  .homeboard {
+    height: 335px;
+  }
+
+  .startrow {
+    height: 0vh;
+  }
+
+  .homequote {
+    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  .hbBtn {
+    margin: 5px;
+    font-weight: 100;
+  }
+
+  .card-menu {
+    height: 300px;
+    width: 280px;
+  }
+
+  .customizepizzaContent,
+  .crustselect option,
+  .sizeselect option,
+  .cheeseselect option,
+  .sauceselect option,
+  .form-check-label {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .pizzaimage {
+    order: -1;
+  }
+
+  .item {
+    border: 1px solid white;
+    padding: 5px 0px;
+  }
+}
