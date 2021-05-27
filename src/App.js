@@ -39,6 +39,7 @@ class App extends Component {
         localStorage.setItem("password", "");
 
         this.setState({ loginflag: localStorage.getItem("loginflag") });
+        window.location.href = "/";
       } else {
         console.log(logOutData);
       }

@@ -292,7 +292,8 @@
 
 .orderHistory,
 .trackOrder,
-.profile {
+.profile,
+.orderStatus {
   background: url("./images/menu-bg.jpg") center center no-repeat;
   overflow: scroll;
   -webkit-background-size: cover;
@@ -309,7 +310,9 @@
 }
 
 .orderItem,
-.trackItem {
+.trackItem,
+.orderItem,
+.itemStatus {
   margin-top: 15px;
   border-bottom: 1px solid #fff;
 }

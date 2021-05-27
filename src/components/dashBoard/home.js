@@ -11,6 +11,7 @@ import pizzerialogo from "./images/pizzerialogo.png";
 import OrderHistory from "./orderhistory.js";
 import TrackOrder from "./trackorder.js";
 import Profile from "./profile.js";
+import OrderStatus from "./orderstatus.js";
 
 import "alertifyjs/build/css/alertify.css";
 import alertify from "alertifyjs";
@@ -55,6 +56,10 @@ class Home extends Component {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  changeStatus = (user) => {
+    this.setState({ user });
   };
 
   handleAddCartCustomized = async (user, totalcartItems) => {
@@ -583,6 +588,21 @@ class Home extends Component {
                             Order History
                           </button>
                         </li>
+                        {this.state.user.role === "admin" ? (
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              type="button"
+                              onClick={() =>
+                                (window.location.href = "/orderStatus")
+                              }
+                            >
+                              Change Order Status
+                            </button>
+                          </li>
+                        ) : (
+                          <></>
+                        )}
                         <li>
                           <div>
                             <Link
@@ -632,6 +652,9 @@ class Home extends Component {
                   </Route>
                   <Route path="/profile">
                     <Profile user={this.state.user} />
+                  </Route>
+                  <Route path="/orderStatus">
+                    <OrderStatus onChangeStatus={this.changeStatus} />
                   </Route>
                 </Switch>
               </Router>
