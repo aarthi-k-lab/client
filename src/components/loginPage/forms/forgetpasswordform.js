@@ -41,11 +41,11 @@ class ForgetPasswordForm extends Component {
     const { otpsentFlag, regMsgPass, error } = this.props;
     return (
       <div className="row forgetForm">
-        <div className="icon">
+        <div className="col-8 col-md-4 icon">
           <i className="fas">&#xf0c0;</i>
         </div>
 
-        <div className="forgetPasswordFormdiv form">
+        <div className="col-8 col-md-4 forgetPasswordFormdiv form">
           {otpsentFlag === false ? (
             <form id="forgetPasswordForm" onSubmit={this.handleotpSent}>
               <div>RESET PASSWORD</div>

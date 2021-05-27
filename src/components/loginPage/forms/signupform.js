@@ -42,20 +42,20 @@ class SignUpForm extends Component {
     return (
       <div className="SignUpForm">
         <div className="row">
-          <div className="col-6"></div>
-          <div className="col-6 members">
+          <div className="col-2 col-md-6"></div>
+          <div className="col-10 col-md-6 members">
             <div className="row registerform">
-              <div className="col-8">
+              <div className="col-12 col-md-8">
                 <i className="fas">&#xf0c0;</i>
               </div>
 
-              <div className="signupFormdiv form col-8">
+              <div className="signupFormdiv form col-12 col-md-8">
                 {otpsentFlag === false ? (
                   <form id="signupForm" onSubmit={this.onTrigger}>
                     <div>MEMBER SIGN UP</div>
                     <div className="input-group flex-nowrap row username">
                       <span
-                        className="input-group-text col-2"
+                        className="input-group-text col-3 col-md-2"
                         id="addon-wrapping"
                       >
                         <img
@@ -66,7 +66,7 @@ class SignUpForm extends Component {
                       </span>
                       <input
                         type="text"
-                        className="form-control col-10"
+                        className="form-control col-9 col-md-10"
                         placeholder="Username"
                         aria-label="Username"
                         aria-describedby="addon-wrapping"
@@ -78,14 +78,14 @@ class SignUpForm extends Component {
                     </div>
                     <div className="input-group flex-nowrap email row">
                       <span
-                        className="input-group-text col-2"
+                        className="input-group-text col-3 col-md-2"
                         id="addon-wrapping"
                       >
                         📧
                       </span>
                       <input
                         type="email"
-                        className="form-control col-10"
+                        className="form-control col-9 col-md-10"
                         placeholder="Email"
                         aria-label="Email"
                         aria-describedby="addon-wrapping"
@@ -97,7 +97,7 @@ class SignUpForm extends Component {
                     </div>
                     <div className="input-group flex-nowrap password row">
                       <span
-                        className="input-group-text col-2"
+                        className="input-group-text col-3 col-md-2"
                         id="addon-wrapping"
                       >
                         <img
@@ -108,7 +108,7 @@ class SignUpForm extends Component {
                       </span>
                       <input
                         type="password"
-                        className="form-control col-10"
+                        className="form-control col-9 col-md-10"
                         placeholder="Password"
                         aria-label="Password"
                         aria-describedby="addon-wrapping"
@@ -120,7 +120,7 @@ class SignUpForm extends Component {
                     </div>
                     <div className="input-group flex-nowrap phone row">
                       <span
-                        className="input-group-text col-2"
+                        className="input-group-text col-3 col-md-2"
                         id="addon-wrapping"
                       >
                         <img
@@ -131,7 +131,7 @@ class SignUpForm extends Component {
                       </span>
                       <input
                         type="text"
-                        className="form-control col-10"
+                        className="form-control col-9 col-md-10"
                         placeholder="PhoneNumber"
                         aria-label="PhoneNumber"
                         aria-describedby="addon-wrapping"
@@ -160,7 +160,7 @@ class SignUpForm extends Component {
                     <div className="input-group flex-nowrap row email">
                       <input
                         type="text"
-                        className="form-control col-8"
+                        className="form-control col-12 col-md-8"
                         placeholder="Enter the OTP sent to the mail"
                         aria-label="OTP"
                         aria-describedby="addon-wrapping"
