@@ -12,7 +12,7 @@ class Profile extends Component {
           <h1>Profile</h1>
         </div>
         <div className="col-12 card-body user-profile-details">
-          <div class="gravatar-wrap">
+          <div className="gravatar-wrap">
             <img
               src="https://i.pinimg.com/474x/96/b9/22/96b92295619ef8e7a4fb7b24185ca3e6.jpg"
               alt="pizzauser"

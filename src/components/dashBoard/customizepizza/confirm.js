@@ -51,6 +51,7 @@ class Confirm extends Component {
       let newuser = {
         role: user.role,
         cartItems: newcartdata,
+        orderItems: user.orderItems,
         username: user.username,
         email: user.email,
         password: user.password,

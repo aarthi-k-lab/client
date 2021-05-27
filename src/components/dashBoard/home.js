@@ -80,6 +80,7 @@ class Home extends Component {
       let newuser = {
         role: user.role,
         cartItems: newcartdata,
+        orderItems: user.orderItems,
         username: user.username,
         email: user.email,
         password: user.password,
@@ -341,6 +342,7 @@ class Home extends Component {
               });
 
               let newOrderData = component.state.user.orderItems;
+              console.log(newOrderData);
               if (newOrderData === null) {
                 newOrderData = [];
                 selectedItems.forEach((item) => {
@@ -355,13 +357,16 @@ class Home extends Component {
               } else {
                 newOrderData = component.state.user.orderItems;
                 selectedItems.forEach((item) => {
-                  newOrderData.push({
-                    item: item,
-                    order_id: response.razorpay_order_id,
-                    payment_id: response.razorpay_payment_id,
-                    signature: response.razorpay_signature,
-                    status: "pending",
-                  });
+                  newOrderData = [
+                    ...newOrderData,
+                    {
+                      item: item,
+                      order_id: response.razorpay_order_id,
+                      payment_id: response.razorpay_payment_id,
+                      signature: response.razorpay_signature,
+                      status: "pending",
+                    },
+                  ];
                 });
               }
               let newuser = {
@@ -373,6 +378,8 @@ class Home extends Component {
                 password: component.state.user.password,
                 phone: component.state.user.phone,
               };
+
+              console.log(newuser);
               let userapiurl =
                 "https://thawing-ridge-74415.herokuapp.com/api/users/" +
                 component.state.user._id;
@@ -387,9 +394,7 @@ class Home extends Component {
               const userdata = await userres.json();
               component.setState({ user: userdata });
               component.setState({ totalcartItems: userdata.cartItems.length });
-
               window.location.href = "/";
-
               alertify.success("Order placed successfully");
             },
             prefill: {
@@ -429,6 +434,8 @@ class Home extends Component {
       } catch (err) {
         console.log(err);
       }
+    } else {
+      alertify.error("Minimum of one order should be selected");
     }
   };
 
