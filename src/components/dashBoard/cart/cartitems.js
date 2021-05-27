@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import CartItem from "./cartitem.js";
+
+import "alertifyjs/build/css/alertify.css";
+import alertify from "alertifyjs";
 class CartItems extends Component {
-  state = { selectedItems: [] };
+  state = { selectedItems: [], deliveryAddress: "", deliveryFlag: false };
   handleToggle = (item, checkValue) => {
     if (checkValue === true) {
       let selectedItems = [...this.state.selectedItems, item];
@@ -14,7 +17,8 @@ class CartItems extends Component {
     }
   };
   render() {
-    const { user, onDelete, onDeleteSelected, onOrder } = this.props;
+    const { user, onDelete, onDeleteSelected, onOrder, onOrderSelected } =
+      this.props;
     return (
       <div className="row cartItems">
         <div
@@ -31,7 +35,7 @@ class CartItems extends Component {
           <div className="row items">
             <ul className="col-12">
               {user.cartItems !== undefined
-                ? user.cartItems.length > 0
+                ? user.cartItems.length > 0 && user.cartitems !== null
                   ? user.cartItems.map((item, index) => (
                       <CartItem
                         key={index}
@@ -45,22 +49,75 @@ class CartItems extends Component {
                 : ""}
             </ul>
           </div>
-          <div className="row" style={{ marginBottom: "15px" }}>
-            <div className="col-6">
-              <button type="button" className=" btn btn-lg btn-success">
-                Buy All Selected Items
-              </button>
+          {this.state.deliveryFlag === true ? (
+            <div className="row">
+              <span className="input-group-text">
+                Enter the delivery Address
+              </span>
+              <textarea
+                className="form-control"
+                aria-label="With textarea"
+                required
+                onChange={(event) =>
+                  this.setState({ deliveryAddress: event.target.value })
+                }
+              ></textarea>
             </div>
-            <div className="col-6">
-              <button
-                type="button"
-                className="btn btn-lg btn-danger"
-                onClick={() => onDeleteSelected(this.state.selectedItems)}
-              >
-                Remove All Selected Items from cart
-              </button>
+          ) : (
+            <></>
+          )}
+          {this.state.deliveryFlag === false ? (
+            <div className="row" style={{ marginBottom: "15px" }}>
+              <div className="col-6">
+                <button
+                  type="button"
+                  className=" btn btn-lg btn-success"
+                  onClick={() => this.setState({ deliveryFlag: true })}
+                >
+                  Buy All Selected Items
+                </button>
+              </div>
+              <div className="col-6">
+                <button
+                  type="button"
+                  className="btn btn-lg btn-danger"
+                  onClick={() => onDeleteSelected(this.state.selectedItems)}
+                >
+                  Remove All Selected Items from cart
+                </button>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="row" style={{ marginBottom: "15px" }}>
+              <div className="col-6">
+                <button
+                  type="button"
+                  className=" btn btn-lg btn-success"
+                  onClick={() => this.setState({ deliveryFlag: false })}
+                >
+                  ← Back
+                </button>
+              </div>
+              <div className="col-6">
+                <button
+                  type="button"
+                  className="btn btn-lg btn-danger"
+                  onClick={() => {
+                    if (this.state.deliveryAddress === "") {
+                      alertify.error("Address cannot be empty");
+                    } else {
+                      onOrderSelected(
+                        this.state.selectedItems,
+                        this.state.deliveryAddress
+                      );
+                    }
+                  }}
+                >
+                  Order Now
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );

@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import "alertifyjs/build/css/alertify.css";
+
+import alertify from "alertifyjs";
 class CartItem extends Component {
-  state = { flag: false, viewFlag: false };
+  state = {
+    flag: false,
+    viewFlag: false,
+    addressFlag: false,
+    deliveryAddress: "",
+  };
   render() {
     const { item, onToggle, onDelete, onOrder } = this.props;
     return (
@@ -73,7 +81,23 @@ class CartItem extends Component {
               </div>
               <div className="row">
                 <div className="col-12">
-                  <img src={item.image} alt={item.name} />
+                  {this.state.addressFlag === false ? (
+                    <img src={item.image} alt={item.name} />
+                  ) : (
+                    <div className="addressDiv">
+                      <span className="input-group-text">
+                        Enter the delivery Address
+                      </span>
+                      <textarea
+                        className="form-control"
+                        aria-label="With textarea"
+                        required
+                        onChange={(event) =>
+                          this.setState({ deliveryAddress: event.target.value })
+                        }
+                      ></textarea>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -111,29 +135,56 @@ class CartItem extends Component {
                   <h3>Price: {item.price}</h3>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-6">
-                  <button
-                    type="button"
-                    className="btn btn-success"
-                    onClick={() => onOrder(item)}
-                  >
-                    Order Now
-                  </button>
+              {this.state.addressFlag === false ? (
+                <div className="row">
+                  <div className="col-6">
+                    <button
+                      type="button"
+                      className="btn btn-success"
+                      onClick={() => this.setState({ addressFlag: true })}
+                    >
+                      Order Now
+                    </button>
+                  </div>
+                  <div className="col-6">
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => {
+                        onDelete(item);
+                        this.setState({ viewFlag: false });
+                      }}
+                    >
+                      Delete from cart
+                    </button>
+                  </div>
                 </div>
-                <div className="col-6">
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => {
-                      onDelete(item);
-                      this.setState({ viewFlag: false });
-                    }}
-                  >
-                    Delete from cart
-                  </button>
+              ) : (
+                <div className="row">
+                  <div className="col-6">
+                    <button
+                      type="button"
+                      className="btn btn-success"
+                      onClick={() => this.setState({ addressFlag: false })}
+                    >
+                      ← Back
+                    </button>
+                  </div>
+                  <div className="col-6">
+                    <button
+                      type="submit"
+                      className="btn btn-success"
+                      onClick={() => {
+                        if (this.state.deliveryAddress === "") {
+                          alertify.error("Address cannot be empty");
+                        } else onOrder(item, this.state.deliveryAddress);
+                      }}
+                    >
+                      Order Now
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         )}

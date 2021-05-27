@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 
-import alertify from "../../alertifyjs/alertify.js";
+// import alertify from "../../alertifyjs/alertify.js";
 
-import "../../alertifyjs/css/alertify.css";
+// import "../../alertifyjs/css/alertify.css";
+
+import "alertifyjs/build/css/alertify.css";
+
+import alertify from "alertifyjs";
 class Confirm extends Component {
   state = { pizzaname: "" };
 

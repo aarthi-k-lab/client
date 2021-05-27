@@ -139,7 +139,7 @@ class CheeseAndSauce extends Component {
                 )
               }
             >
-              Back ←
+              ← Back
             </button>
           </div>
           <div className="col-12">
