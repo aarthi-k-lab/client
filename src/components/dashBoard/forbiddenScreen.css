@@ -42,6 +42,7 @@
 .home {
   /* background-color: #393a3c; */
   background-color: #f1c236;
+  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
   /* background: url("./images/pizza-2.jpg") center center no-repeat; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
