@@ -29,7 +29,18 @@ class Pizza extends Component {
               >
                 <option value="Regular">Regular</option>
                 <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
+                <option
+                  value="Large"
+                  disabled={
+                    pizza.price
+                      ? pizza.price["Large"]["New Hand Tossed"] === 0
+                        ? true
+                        : false
+                      : ""
+                  }
+                >
+                  Large
+                </option>
               </select>
             </div>
             <div className="col-6 crust">

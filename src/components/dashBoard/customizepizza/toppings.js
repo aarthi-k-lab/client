@@ -64,7 +64,7 @@ class Toppings extends Component {
             className="col-6 col-md-3 col-lg-4 col-xl-3 meatselectdiv"
             style={{ textAlign: "left" }}
           >
-            <h1>Meat</h1>
+            <h1>Non Veg Options</h1>
             <div className="meatCheck" style={{ padding: "10px" }}>
               <div className="col-12">
                 <input
@@ -249,7 +249,7 @@ class Toppings extends Component {
             className="col-6 col-md-5 col-lg-3 col-xl-3 nonmeatselectdiv"
             style={{ textAlign: "left" }}
           >
-            <h1>non meat</h1>
+            <h1>Veg Options</h1>
             <div className="nonmeatCheck" style={{ padding: "10px" }}>
               <div className="col-12">
                 <input
