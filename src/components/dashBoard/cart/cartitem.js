@@ -15,7 +15,7 @@ class CartItem extends Component {
       <>
         {this.state.viewFlag === false ? (
           <li className="item row">
-            <div className="col-2">
+            <div className="col-2 col-md-1">
               <input
                 className="form-check-input checkinput"
                 type="checkbox"

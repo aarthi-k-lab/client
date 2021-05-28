@@ -435,6 +435,7 @@ class Home extends Component {
         console.log(err);
       }
     } else {
+      alertify.set("notifier", "position", "top-right");
       alertify.error("Minimum of one order should be selected");
     }
   };
