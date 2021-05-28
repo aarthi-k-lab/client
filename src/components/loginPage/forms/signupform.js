@@ -38,7 +38,7 @@ class SignUpForm extends Component {
   };
 
   render() {
-    const { otpsentFlag, regMsg } = this.props;
+    const { otpsentFlag, regMsg, error } = this.props;
     return (
       <div className="SignUpForm">
         <div className="row">
@@ -143,7 +143,7 @@ class SignUpForm extends Component {
                         }
                       ></input>
                     </div>
-                    <div className="errormessage">{this.state.error}</div>
+                    <div className="errormessage">{error}</div>
                     <button
                       type="submit"
                       data-toggle="button"
@@ -192,7 +192,11 @@ class SignUpForm extends Component {
                   <>{regMsg}</>
                 )}
                 <div className="loginbtndiv">
-                  <Link className="linkLogin" to="/">
+                  <Link
+                    className="linkLogin"
+                    to="/"
+                    onClick={() => this.props.clearError()}
+                  >
                     Login
                   </Link>
                 </div>

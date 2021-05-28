@@ -114,11 +114,12 @@ class Login extends Component {
       });
       const newUser = await newUserRes.json();
       if (!newUser.error) {
-        this.setState({ regMsg: "User Registerd Successfully" });
+        this.setState({ regMsg: "User Registerd Successfully", error: "" });
       } else {
         this.setState({
           regMsg:
             "User is not registered Please make sure the email given is not already registered",
+          error: "",
         });
       }
     } catch (error) {
@@ -188,6 +189,7 @@ class Login extends Component {
                   error={this.state.error}
                   onSettingNewFlag={this.handleSetNewPassword}
                   regMsgPass={this.state.regMsgPass}
+                  clearError={() => this.setState({ error: "" })}
                 />
               </Route>
               <Route path="/signUp">
@@ -198,6 +200,7 @@ class Login extends Component {
                   otp={this.state.otp}
                   registerUser={this.registerUser}
                   regMsg={this.state.regMsg}
+                  clearError={() => this.setState({ error: "" })}
                 />
               </Route>
             </Switch>

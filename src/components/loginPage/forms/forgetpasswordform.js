@@ -69,7 +69,7 @@ class ForgetPasswordForm extends Component {
                   }
                 ></input>
               </div>
-              <div>{error}</div>
+              <div className="errormessage">{error}</div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <button
                   type="submit"
@@ -190,7 +190,11 @@ class ForgetPasswordForm extends Component {
             <>{regMsgPass}</>
           )}
           <div className="loginbtndiv">
-            <Link className="linkLogin" to="/">
+            <Link
+              className="linkLogin"
+              to="/"
+              onClick={() => this.props.clearError()}
+            >
               Login
             </Link>
           </div>
