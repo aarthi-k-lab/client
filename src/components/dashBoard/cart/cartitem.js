@@ -15,7 +15,7 @@ class CartItem extends Component {
       <>
         {this.state.viewFlag === false ? (
           <li className="item row">
-            <div className="col-1">
+            <div className="col-2">
               <input
                 className="form-check-input checkinput"
                 type="checkbox"
@@ -29,7 +29,7 @@ class CartItem extends Component {
                 }}
               />
             </div>
-            <div className="itemImage col-11  col-lg-3">
+            <div className="itemImage col-10  col-lg-3">
               <img src={item.image} alt={item.name} height="100px" />
             </div>
             <div className="itemname col-6 col-md-9 col-lg-6">
