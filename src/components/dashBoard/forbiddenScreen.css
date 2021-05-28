@@ -9,7 +9,8 @@
 }
 
 .sessionExpired {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 68px;
   line-height: 62px;
   font-weight: 600;
@@ -18,7 +19,8 @@
 }
 
 .sessionexpireddiv {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 25px;
   line-height: 50px;
   font-weight: 600;
@@ -64,14 +66,16 @@
 }
 
 .homeLinks {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 30px;
   line-height: 50px;
   font-weight: 400;
 }
 
 .homequote {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 50px;
   line-height: 50px;
   font-weight: 500;
@@ -110,7 +114,8 @@
   -o-background-size: cover;
   background-size: cover;
   height: 595px;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 50px;
   line-height: 50px;
   font-weight: 500;
@@ -119,7 +124,8 @@
 
 .pizzamenu,
 .othermenu {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -138,7 +144,8 @@
 
 .pizzacard {
   color: #000;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 15px;
   line-height: 20px;
 }
@@ -151,7 +158,8 @@
   -o-background-size: cover;
   background-size: cover;
   height: 595px;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 30px;
   line-height: 50px;
   font-weight: 300;
@@ -269,7 +277,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
@@ -284,7 +293,8 @@
   -o-background-size: cover;
   background-size: cover;
   height: 595px;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 30px;
   line-height: 50px;
   font-weight: 300;
@@ -303,7 +313,8 @@
   -o-background-size: cover;
   background-size: cover;
   height: 595px;
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 20px;
   /* line-height: 50px;
   font-weight: 300; */
@@ -413,7 +424,8 @@
   }
 
   .homequote {
-    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+    font-family: "Brush Script MT", cursive;
     font-size: 30px;
     line-height: 50px;
     font-weight: 300;
@@ -476,7 +488,8 @@
   }
 
   .homequote {
-    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+    font-family: "Brush Script MT", cursive;
     font-size: 30px;
     line-height: 50px;
     font-weight: 300;
@@ -540,7 +553,8 @@
   }
 
   .homequote {
-    font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+    /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+    font-family: "Brush Script MT", cursive;
     font-size: 20px;
     line-height: 50px;
     font-weight: 200;

@@ -66,6 +66,7 @@ i.fas {
   padding: 5px;
   margin: 5px;
   font-family: "Abril Fatface", Helvetica, Arial, sans-serif;
+  /* font-family: "Abril Fatface", sans-serif; */
   font-size: 15px;
   text-align: center;
   color: white;
@@ -111,7 +112,8 @@ i.fas {
 }
 
 .customizepizza {
-  font-family: "Brush Script MT", Helvetica, Arial, sans-serif;
+  /* font-family: "Brush Script MT", Helvetica, Arial, sans-serif; */
+  font-family: "Brush Script MT", cursive;
   font-size: 68px;
   line-height: 62px;
   font-weight: 600;
