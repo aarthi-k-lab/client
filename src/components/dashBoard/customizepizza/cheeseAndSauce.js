@@ -51,6 +51,7 @@ class CheeseAndSauce extends Component {
                     this.state.cheesePrice[event.target.value],
                 })
               }
+              defaultValue={this.props.cheese}
             >
               <option value="mozarella">Mozzarella</option>
               <option value="cottage">Cottage</option>
@@ -111,6 +112,7 @@ class CheeseAndSauce extends Component {
                     this.state.saucePrice[event.target.value],
                 })
               }
+              defaultValue={this.props.sauce}
             >
               <option value="pesto">Pesto</option>
               <option value="garlicranch">Garlic Ranch</option>

@@ -67,6 +67,7 @@ class CrustAndSize extends Component {
                   total: this.state.price[this.state.size][event.target.value],
                 })
               }
+              defaultValue={this.props.crust}
             >
               <option value="regular">Regular</option>
               <option value="wholewheat">Whole Wheat</option>
@@ -125,6 +126,7 @@ class CrustAndSize extends Component {
                   total: this.state.price[event.target.value][this.state.crust],
                 })
               }
+              defaultValue={this.props.size}
             >
               <option value="regular">Regular - 4 Piece</option>
               <option value="medium">Medium- 6 Piece</option>
